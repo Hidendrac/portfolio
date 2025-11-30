@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hidendra Chaudhary - Full-Stack Developer, Video Editor, and UI Designer. Specializing in Python Django, JavaScript, and modern web technologies.">
-    <meta name="keywords" content="Full-Stack Developer, Python Django, Video Editor, UI Designer, Web Development, Freelancer">
+    <meta name="description" content="Hidendra Chaudhary - Full-Stack Developer, Video Editor, and UI Designer. Available on Fiverr, Upwork, and Freelancer. Specializing in Python Django, JavaScript, and modern web technologies.">
+    <meta name="keywords" content="Full-Stack Developer, Python Django, Video Editor, UI Designer, Web Development, Freelancer, Fiverr, Upwork">
+    <meta name="author" content="Hidendra Chaudhary">
     <title>Hidendra Chaudhary - Full-Stack Developer | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -23,6 +24,9 @@
             --bg-light: #f9fafb;
             --white: #ffffff;
             --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --fiverr-green: #1dbf73;
+            --upwork-green: #14a800;
+            --freelancer-blue: #0e1724;
         }
 
         body {
@@ -79,6 +83,51 @@
             color: var(--primary-color);
         }
 
+        /* Platform Badges */
+        .platform-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            animation: fadeInUp 0.8s ease 0.8s backwards;
+        }
+
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: var(--white);
+        }
+
+        .platform-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border-color: var(--white);
+        }
+
+        .platform-badge i {
+            font-size: 1.2rem;
+        }
+
+        .badge-fiverr {
+            background: var(--fiverr-green);
+        }
+
+        .badge-upwork {
+            background: var(--upwork-green);
+        }
+
+        .badge-freelancer {
+            background: var(--freelancer-blue);
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -128,7 +177,7 @@
 
         .hero-content p {
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             opacity: 0.8;
             animation: fadeInUp 0.8s ease 0.4s backwards;
         }
@@ -137,6 +186,7 @@
             display: flex;
             gap: 1rem;
             animation: fadeInUp 0.8s ease 0.6s backwards;
+            margin-bottom: 1.5rem;
         }
 
         .btn {
@@ -205,6 +255,101 @@
             color: var(--text-light);
             margin-bottom: 3rem;
             font-size: 1.1rem;
+        }
+
+        /* Platforms Section */
+        .platforms {
+            background: var(--white);
+            padding: 3rem 2rem;
+        }
+
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .platform-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .platform-card.fiverr:hover {
+            border-color: var(--fiverr-green);
+        }
+
+        .platform-card.upwork:hover {
+            border-color: var(--upwork-green);
+        }
+
+        .platform-card.freelancer:hover {
+            border-color: var(--freelancer-blue);
+        }
+
+        .platform-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card.fiverr .platform-icon {
+            color: var(--fiverr-green);
+        }
+
+        .platform-card.upwork .platform-icon {
+            color: var(--upwork-green);
+        }
+
+        .platform-card.freelancer .platform-icon {
+            color: var(--freelancer-blue);
+        }
+
+        .platform-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .platform-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .platform-link {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+
+        .platform-link.fiverr {
+            background: var(--fiverr-green);
+        }
+
+        .platform-link.upwork {
+            background: var(--upwork-green);
+        }
+
+        .platform-link.freelancer {
+            background: var(--freelancer-blue);
+        }
+
+        .platform-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
         /* About Section */
@@ -482,6 +627,7 @@
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
         .social-links a {
@@ -613,6 +759,10 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .platform-badges {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -623,6 +773,7 @@
             <div class="logo">HC</div>
             <ul>
                 <li><a href="#home">Home</a></li>
+                <li><a href="#platforms">Hire Me</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -640,12 +791,83 @@
                 <p class="subtitle">Full-Stack Developer | Video Editor | UI Designer</p>
                 <p>I build innovative web solutions, create engaging video content, and design beautiful user interfaces. Currently pursuing B-Tech in IT Engineering with hands-on experience in real-world projects.</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#platforms" class="btn btn-primary">Hire Me Now</a>
                     <a href="#projects" class="btn btn-outline">View Projects</a>
+                </div>
+                <div class="platform-badges">
+                    <a href="#platforms" class="platform-badge badge-fiverr">
+                        <i class="fas fa-star"></i>
+                        <span>Available on Fiverr</span>
+                    </a>
+                    <a href="#platforms" class="platform-badge badge-upwork">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Hire on Upwork</span>
+                    </a>
+                    <a href="#platforms" class="platform-badge badge-freelancer">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Find on Freelancer</span>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
                 <i class="fas fa-laptop-code" style="font-size: 15rem; color: rgba(255,255,255,0.9);"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms" id="platforms">
+        <div class="container">
+            <h2 class="section-title">Hire Me on These Platforms</h2>
+            <p class="section-subtitle">Choose your preferred freelancing platform to work with me</p>
+            
+            <div class="platforms-grid">
+                <div class="platform-card fiverr">
+                    <div class="platform-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Fiverr</h3>
+                    <p>Browse my gigs for video editing, web development, and UI design. Quick turnaround, professional quality, and competitive rates starting at just ₹500.</p>
+                    <p><strong>Services Available:</strong></p>
+                    <ul style="text-align: left; color: var(--text-light); margin-bottom: 1.5rem;">
+                        <li>• YouTube Video Editing (from ₹500)</li>
+                        <li>• UI/UX Design in Figma (from ₹2,000)</li>
+                        <li>• Full-Stack Web Development (from ₹5,000)</li>
+                    </ul>
+                    <a href="https://www.fiverr.com/hidendra_dev" target="_blank" class="platform-link fiverr">View Fiverr Profile</a>
+                </div>
+
+                <div class="platform-card upwork">
+                    <div class="platform-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Upwork</h3>
+                    <p>Hire me for long-term projects and ongoing work. Specialized in Python Django development, video editing, and UI design with 40+ hours/week availability.</p>
+                    <p><strong>Hourly Rate:</strong> $8/hour</p>
+                    <p><strong>Expertise:</strong></p>
+                    <ul style="text-align: left; color: var(--text-light); margin-bottom: 1.5rem;">
+                        <li>• Full-Stack Web Applications</li>
+                        <li>• REST API Development</li>
+                        <li>• Professional Video Editing</li>
+                    </ul>
+                    <a href="https://www.upwork.com/freelancers/~hidendrachaudhary" target="_blank" class="platform-link upwork">View Upwork Profile</a>
+                </div>
+
+                <div class="platform-card freelancer">
+                    <div class="platform-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Freelancer.com</h3>
+                    <p>Competitive bidding for your projects. Certified in Full-Stack Development with proven skills in Python, Django, JavaScript, and video editing.</p>
+                    <p><strong>Hourly Rate:</strong> $7/hour</p>
+                    <p><strong>Verified Skills:</strong></p>
+                    <ul style="text-align: left; color: var(--text-light); margin-bottom: 1.5rem;">
+                        <li>• Python & Django Development</li>
+                        <li>• JavaScript & Web Development</li>
+                        <li>• Video Editing & UI Design</li>
+                    </ul>
+                    <a href="https://www.freelancer.com/u/hidendrachaudhary" target="_blank" class="platform-link freelancer">View Freelancer Profile</a>
+                </div>
             </div>
         </div>
     </section>
@@ -825,7 +1047,7 @@
                         <li><i class="fas fa-check"></i> Responsive design</li>
                     </ul>
                     <div class="price">Starting at ₹5,000</div>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#platforms" class="btn btn-primary">Get Started</a>
                 </div>
 
                 <div class="service-card">
@@ -840,7 +1062,7 @@
                         <li><i class="fas fa-check"></i> Audio enhancement</li>
                     </ul>
                     <div class="price">Starting at ₹500</div>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#platforms" class="btn btn-primary">Get Started</a>
                 </div>
 
                 <div class="service-card">
@@ -855,7 +1077,7 @@
                         <li><i class="fas fa-check"></i> Design systems</li>
                     </ul>
                     <div class="price">Starting at ₹2,000</div>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#platforms" class="btn btn-primary">Get Started</a>
                 </div>
             </div>
         </div>
@@ -897,9 +1119,12 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="https://github.com/Hidendra1" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/hidendra-chaudhary" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:hidendrac@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/Hidendrac" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/hidendra-chaudhary" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.fiverr.com/hidendra_dev" target="_blank" title="Fiverr"><i class="fas fa-star"></i></a>
+                        <a href="https://www.upwork.com/freelancers/~hidendrachaudhary" target="_blank" title="Upwork"><i class="fas fa-briefcase"></i></a>
+                        <a href="https://www.freelancer.com/u/hidendrachaudhary" target="_blank" title="Freelancer"><i class="fas fa-laptop-code"></i></a>
+                        <a href="mailto:hidendrac@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
@@ -931,6 +1156,11 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Hidendra Chaudhary. All rights reserved. | Built with passion and code</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            <a href="https://www.fiverr.com/hidendra_dev" style="color: var(--fiverr-green); text-decoration: none; margin: 0 0.5rem;">Fiverr</a> | 
+            <a href="https://www.upwork.com/freelancers/~hidendrachaudhary" style="color: var(--upwork-green); text-decoration: none; margin: 0 0.5rem;">Upwork</a> | 
+            <a href="https://www.freelancer.com/u/hidendrachaudhary" style="color: #29b5e8; text-decoration: none; margin: 0 0.5rem;">Freelancer</a>
+        </p>
     </footer>
 
     <script>
